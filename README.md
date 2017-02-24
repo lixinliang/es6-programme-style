@@ -19,8 +19,6 @@
 * [对象简洁表示法](#对象简洁表示法)
 * [属性名表达式](#属性名表达式)
 * [方法简洁表示法](#方法简洁表示法)
-* [属性名表达式](#属性名表达式)
-* [方法简洁表示法](#方法简洁表示法)
 * [对象的扩展运算符](#对象的扩展运算符)
 * [Generator 函数](#Generator)
 * [Async 函数](#Async)
@@ -80,6 +78,7 @@
     * 转译后抛出异常的错误信息: ❌
         * 便于定位问题与兼容处理
 
+<a name="let"></a>
 ## let 命令 [🔝](#目录) ![](ie_good.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * 使用 `let` 替换 `var`
@@ -111,6 +110,7 @@ function test () {
 
 [→在线转译][02]
 
+<a name="const"></a>
 ## const 命令 [🔝](#目录) ![](ie_good.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * 定义一个`复杂类型`作为常量时，它的属性是可以更改的
@@ -127,6 +127,7 @@ if (obj.value) {
 console.log(obj);
 ```
 
+<a name="变量解构赋值"></a>
 ## 变量解构赋值 [🔝](#目录)
 
 #### 对象的解构赋值 ![](ie_good.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
@@ -192,6 +193,7 @@ let {
 
 [→在线转译][06]
 
+<a name="字符串模板"></a>
 ## 字符串模板 [🔝](#目录) ![](ie_good.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * 使用`` ` ``替换`'`和`"`
@@ -208,6 +210,7 @@ let text = `
 
 [→在线转译][07]
 
+<a name="标签模板"></a>
 ## 标签模板 [🔝](#目录) ![](ie_bad.png) ![](star_fill.png) ![](star_fill.png) ![](star.png)
 
 * `标签模板`也是`函数`，在 `i18n` 或者 `helper` 情景下使用比较适合
@@ -240,6 +243,7 @@ let text = parse`uid : ${ uid }, name : ${ username }, avator : ${ avator }`;
 
 [→在线转译][08]
 
+<a name="指数运算符"></a>
 ## 指数运算符 * [🔝](#目录) ![](ie_good.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * `Math.pow` 的语法糖
@@ -251,6 +255,7 @@ let hundred = 10 ** 2;
 
 [→在线转译][09]
 
+<a name="函数参数默认值"></a>
 ## 函数参数默认值 [🔝](#目录) ![](ie_good.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * 相比 `name = name || ''` 更优雅与直观，并且更严谨
@@ -264,6 +269,7 @@ function setName ( name = '' ) {
 
 [→在线转译][10]
 
+<a name="rest"></a>
 ## rest 运算符 [🔝](#目录) ![](ie_good.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * 比`arguments`更灵活
@@ -278,13 +284,14 @@ function foo ( elem, ...params ) {
 
 [→在线转译][11]
 
+<a name="扩展运算符"></a>
 ## 扩展运算符 [🔝](#目录) ![](ie_bad.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * 调用`函数`时，使用`扩展运算符`可以将一个`数组`，变为`参数序列`
 
 ```js
 // 😁
-console.log(...[1, 2, 3], ...messages);
+console.log(...[1, 2, 3], ...document.scripts);
 ```
 
 ```
@@ -294,6 +301,7 @@ console.log(...[1, 2, 3], ...messages);
 
 [→在线转译][12]
 
+<a name="箭头函数"></a>
 ## 箭头函数 [🔝](#目录) ![](ie_good.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * 减少 `function` 关键字的词频，提高编码效率
@@ -329,6 +337,7 @@ main();
 
 [→在线转译][14]
 
+<a name="函数绑定运算符"></a>
 ## 函数绑定运算符 * [🔝](#目录) ![](ie_good.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * 以`链式调用`的方式调用`函数`
@@ -345,6 +354,7 @@ console.log({}::set('uid', '123')::set('username', 'Max'));
 
 [→在线转译][15]
 
+<a name="对象简洁表示法"></a>
 ## 对象简洁表示法 [🔝](#目录) ![](ie_good.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * 当`变量`与`属性名`同名时，推荐简写合并，比如调用 `ajax` 时的传参，保持`变量`一致，提高代码可读性
@@ -361,6 +371,7 @@ let data = {
 
 [→在线转译][16]
 
+<a name="属性名表达式"></a>
 ## 属性名表达式 [🔝](#目录) ![](ie_good.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * `属性名`支持表达式
@@ -375,6 +386,7 @@ let obj = {
 
 [→在线转译][17]
 
+<a name="方法简洁表示法"></a>
 ## 方法简洁表示法 [🔝](#目录) ![](ie_good.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * 减少 `function` 关键字的词频，提高编码效率
@@ -390,6 +402,7 @@ let obj = {
 
 [→在线转译][18]
 
+<a name="对象的扩展运算符"></a>
 ## 对象的扩展运算符 * [🔝](#目录) ![](ie_good.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * 将一个`对象`的可遍历属性拷贝到其他`对象`，`Object.assign` 的语法糖
@@ -402,6 +415,7 @@ let cat = { ...animal, tail : 1 };
 
 [→在线转译][19]
 
+<a name="Generator"></a>
 ## Generator 函数 [🔝](#目录) ![](ie_bad.png) ![](star_fill.png) ![](star.png) ![](star.png)
 
 * `Generator` 依赖 `regeneratorRuntime`，所以 `babel` 需要添加 `babel-plugin-transform-runtime` 插件
@@ -427,6 +441,7 @@ console.log(genertor.next('input').value); // 外部注值
 缺少标识符、字符串或数字
 ```
 
+<a name="Async"></a>
 ## Async 函数 * [🔝](#目录) ![](ie_bad.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * `Generator` 的语法糖
@@ -451,6 +466,7 @@ getData('http://legox.yy.com/mock/api/33').then(( data ) => {
 缺少标识符、字符串或数字
 ```
 
+<a name="Class"></a>
 ## Class [🔝](#目录) ![](ie_bad.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * 比`构造函数更规范`，可读性更高
@@ -491,6 +507,7 @@ let pendant = new Pendant();
 
 [→在线转译][20]
 
+<a name="修饰器"></a>
 ## 修饰器 [🔝](#目录) ![](ie_bad.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * `babel` 需要开启 `Experimental` 才能支持
@@ -517,6 +534,7 @@ class Person {
 
 [→在线转译][21]
 
+<a name="模块"></a>
 ## 模块 [🔝](#目录) ![](ie_good.png) ![](star_fill.png) ![](star_fill.png) ![](star_fill.png)
 
 * 使用 `import`，`export`
@@ -547,8 +565,6 @@ import 'jquery.parallax';
 ## 参考链接 [🔝](#目录)
 
 * [《ECMAScript 6 入门》]
-* [大括号的圣战]
-* [缩进圣战]
 * [JavaScript 编码规范]
 * [Babel Compiler]
 * [LegoFlow]
@@ -580,7 +596,7 @@ MIT
 [09]: http://babeljs.cn/repl/#?experimental=false&evaluate=true&loose=false&spec=false&code=let%20hundred%20%3D%2010%20**%202%3B
 [10]: http://babeljs.cn/repl/#?experimental=false&evaluate=true&loose=false&spec=false&code=function%20setName%20(%20name%20%3D%20''%20)%20%7B%0A%20%20document.querySelector('%23name').innerText%20%3D%20name%3B%0A%7D
 [11]: http://babeljs.cn/repl/#?experimental=false&evaluate=true&loose=false&spec=false&code=function%20foo%20(%20elem%2C%20...params%20)%20%7B%0A%20%20%2F%2F%20...%0A%20%20console.log(params)%3B%0A%7D
-[12]: http://babeljs.cn/repl/#?experimental=false&evaluate=true&loose=false&spec=false&code=console.log(...%5B1%2C%202%2C%203%5D%2C%20...messages)%3B
+[12]: http://babeljs.cn/repl/#?experimental=false&evaluate=true&loose=false&spec=false&code=console.log(...%5B1%2C%202%2C%203%5D%2C%20...document.scripts)%3B
 [13]: http://babeljs.cn/repl/#?experimental=false&evaluate=true&loose=false&spec=false&code=let%20image%20%3D%20new%20Image%3B%0Aimage.onload%20%3D%20function%20()%20%7B%0A%20%20%20%20setTimeout(()%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%2F%2F%20%E6%8C%87%E5%90%91%20image%20%E8%80%8C%E4%B8%8D%E6%98%AF%20window%0A%20%20%20%20%20%20%20%20console.log(this)%3B%0A%20%20%20%20%7D%2C3000)%3B%0A%7D%3B%0Aimage.src%20%3D%20url%3B
 [14]: http://babeljs.cn/repl/#?experimental=false&evaluate=true&loose=false&spec=false&code=function%20main%20()%20%7B%0A%20%20%20%20document.addEventListener('click'%2C%20(%20event%20)%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%2F%2F%20%E9%A2%84%E6%9C%9F%E6%98%AF%20document%20%E8%80%8C%E4%B8%8D%E6%98%AF%20window%0A%20%20%20%20%20%20%20%20console.log(this)%3B%0A%20%20%20%20%7D%2C%20false)%3B%0A%7D%0Amain()%3B
 [15]: http://babeljs.cn/repl/#?experimental=true&evaluate=true&loose=false&spec=false&code=function%20set%20(%20key%2C%20value%20)%20%7B%0A%20%20this%5Bkey%5D%20%3D%20value%3B%0A%20%20return%20this%3B%0A%7D%0Aconsole.log(%7B%7D%3A%3Aset('uid'%2C%20'123')%3A%3Aset('username'%2C%20'Max'))%3B
